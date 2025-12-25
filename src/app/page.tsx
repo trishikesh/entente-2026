@@ -1,65 +1,128 @@
-import Image from "next/image";
+'use client';
+
+import HeroCarousel from '@/components/HeroCarousel';
+import SectionWrapper from '@/components/SectionWrapper';
+import Card from '@/components/Card';
+import CTAButton from '@/components/CTAButton';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main>
+      {/* Hero Section */}
+      <SectionWrapper className="bg-white py-0">
+        <HeroCarousel />
+      </SectionWrapper>
+
+      {/* About ENTENTE-2026 — Split Layout */}
+      <SectionWrapper className="bg-white py-14">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          
+          {/* Text */}
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold text-maroon mb-6">
+              About ENTENTE-2026
+            </h2>
+            <p className="text-maroon text-lg leading-relaxed mb-6">
+              ENTENTE-2026 is an international conference providing a collaborative platform for researchers,
+              students, academicians, and industry experts to exchange ideas across domains such as humanities,
+              social sciences, management, educational technology, and library sciences.
+            </p>
+            <CTAButton href="/about" label="Learn More" />
+          </div>
+
+          {/* Image Placeholder */}
+          <div className="flex justify-center">
+            <div className="w-72 h-72 rounded-full border-2 border-maroon flex items-center justify-center text-maroon">
+              Image
+            </div>
+          </div>
+
+        </div>
+      </SectionWrapper>
+
+      {/* Conference Theme — Inset Highlight Box */}
+      <SectionWrapper className="bg-white py-14">
+        <div className="max-w-5xl mx-auto border-2 border-maroon rounded-2xl p-10">
+          <h2 className="text-3xl font-bold text-maroon text-center mb-6">
+            Conference Theme
+          </h2>
+          <h3 className="text-xl md:text-2xl font-semibold text-maroon text-center mb-4">
+            Knowledge Society in Transition: Advancing Sustainability through Multidisciplinary Research
+          </h3>
+          <p className="text-maroon text-center max-w-3xl mx-auto">
+            The theme highlights the need to rethink knowledge creation, sharing, and application amid global
+            ecological, technological, and cultural shifts.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </SectionWrapper>
+
+      {/* Key Highlights — Cards + Visual Balance */}
+      <SectionWrapper className="bg-maroon py-14">
+        <h2 className="text-3xl md:text-4xl font-bold text-yellow text-center mb-12">
+          Key Highlights
+        </h2>
+
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+          <Card>
+            <h4 className="text-lg font-semibold text-maroon mb-3">Best Paper Awards</h4>
+            <p className="text-maroon">Awards across all four thematic areas</p>
+          </Card>
+
+          <Card>
+            <h4 className="text-lg font-semibold text-maroon mb-3">Workshops</h4>
+            <p className="text-maroon">Case Writing and Impactful Research workshops</p>
+          </Card>
+
+          <Card>
+            <h4 className="text-lg font-semibold text-maroon mb-3">Networking Dinner</h4>
+            <p className="text-maroon">An exclusive networking dinner on 9th April 2026</p>
+          </Card>
+
+          <Card>
+            <h4 className="text-lg font-semibold text-maroon mb-3">Certificates</h4>
+            <p className="text-maroon">Certificates for all workshop participants</p>
+          </Card>
         </div>
-      </main>
-    </div>
+      </SectionWrapper>
+
+      {/* Important Dates — Image + Content Flip */}
+      <SectionWrapper className="bg-white py-14">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+          {/* Image Placeholder */}
+          <div className="flex justify-center order-2 md:order-1">
+            <div className="w-72 h-48 rounded-xl border-2 border-maroon flex items-center justify-center text-maroon">
+              Event Image
+            </div>
+          </div>
+
+          {/* Dates */}
+          <div className="order-1 md:order-2">
+            <h2 className="text-3xl md:text-4xl font-bold text-maroon mb-8">
+              Important Dates
+            </h2>
+
+            <div className="grid grid-cols-1 gap-4">
+              {[
+                ['Abstract Submission Closes', '30 November 2025'],
+                ['Full Paper Submission Closes', '30 December 2025'],
+                ['Early Bird Registration Closes', '30 January 2026'],
+                ['Conference Dates', '8–10 April 2026'],
+              ].map(([title, date]) => (
+                <div key={title} className="border border-maroon rounded-lg p-4">
+                  <p className="font-semibold text-maroon">{title}</p>
+                  <p className="text-maroon mt-1">{date}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8">
+              <CTAButton href="/important-dates" label="View All Dates" />
+            </div>
+          </div>
+
+        </div>
+      </SectionWrapper>
+    </main>
   );
 }

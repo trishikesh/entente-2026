@@ -1,26 +1,65 @@
 @import "tailwindcss";
 
+/* ENTENTE-2026 Color Palette - Strict White, Maroon, Yellow */
 :root {
+  --color-white: #ffffff;
+  --color-maroon: #8b2635;     /* Primary maroon */
+  --color-maroon-dark: #6b1d28; /* Darker maroon for hover/emphasis */
+  --color-maroon-light: #a83a4a; /* Lighter maroon for borders */
+  --color-yellow: #d4af37;      /* Gold/Muted yellow accent */
+  --color-yellow-dark: #b89923; /* Darker yellow for hover */
+  
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #8b2635;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
 }
+
+/* Utility classes for theme colors */
+.text-maroon { color: #8b2635; }
+.text-maroon-dark { color: #6b1d28; }
+.text-maroon-light { color: #a83a4a; }
+.text-yellow { color: #d4af37; }
+
+.bg-maroon { background-color: #8b2635; }
+.bg-maroon-dark { background-color: #6b1d28; }
+.bg-maroon-light { background-color: #a83a4a; }
+.bg-yellow { background-color: #d4af37; }
+
+.border-maroon { border-color: #8b2635; }
+.border-maroon-light { border-color: #a83a4a; }
+
+/* Hover states */
+.hover-maroon:hover { color: #6b1d28; }
+.hover-bg-maroon:hover { background-color: #6b1d28; }
+
+/* Strong heading emphasis */
+h1, h2, h3, h4, h5, h6 {
+  color: #8b2635;
+  font-weight: 600;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+
+/* Glass morphism effect for navbar */
+.glass-morphism {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #a83a4a;
+}
+
+
