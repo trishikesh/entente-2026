@@ -70,9 +70,11 @@ export default function OrganizingCommittee() {
         {/* Default View */}
         <div className="flex flex-col items-center">
           {/* Circular Image */}
-          <div className="w-32 h-32 rounded-full bg-maroon flex items-center justify-center text-yellow mb-4">
-            <span className="text-sm font-semibold">Image</span>
-          </div>
+          <img
+            src={`/images/people/${member.name}.${idx === 2 ? 'jpeg' : 'jpg'}`}
+            alt={member.name}
+            className="w-32 h-32 rounded-full object-cover border-4 border-maroon mb-4"
+          />
 
           <h3 className="text-base font-semibold text-maroon">
             {member.name}
@@ -135,11 +137,13 @@ export default function OrganizingCommittee() {
       </ul>
     </div>
 
-    {/* Right: Image Placeholder */}
+    {/* Right: Committee Image */}
     <div className="flex justify-center">
-      <div className="w-full h-100 bg-maroon rounded-xl flex items-center justify-center text-yellow">
-        <span className="text-sm font-semibold">[Committee at Work – Image Placeholder]</span>
-      </div>
+      <img 
+        src="/images/conference-image.jpg" 
+        alt="Committee at Work" 
+        className="w-full h-80 object-cover rounded-xl shadow-lg"
+      />
     </div>
 
   </div>

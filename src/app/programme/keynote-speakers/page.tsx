@@ -1,6 +1,5 @@
 import SectionWrapper from '@/components/SectionWrapper';
 import Card from '@/components/Card';
-import PlaceholderImage from '@/components/PlaceholderImage';
 
 export const metadata = {
   title: 'Keynote & Speakers | ENTENTE-2026',
@@ -86,10 +85,12 @@ export default function KeynoteSpeakers() {
         key={index}
         className="group relative border border-maroon rounded-xl p-6 flex flex-col items-center text-center overflow-hidden"
       >
-        {/* Image */}
-        <div className="mb-4">
-          <PlaceholderImage type="speaker" alt={speaker.name} />
-        </div>
+        {/* Photo */}
+        <img
+          src={`/images/people/${speaker.name}.${index === 0 ? 'png' : index === 2 ? 'jpeg' : 'jpg'}`}
+          alt={speaker.name}
+          className="w-32 h-32 rounded-full object-cover border-4 border-maroon mb-4"
+        />
 
         {/* Name + Designation (Always Visible) */}
         <h3 className="text-lg font-semibold text-maroon mb-1">

@@ -1,6 +1,5 @@
 import SectionWrapper from '@/components/SectionWrapper';
 import Card from '@/components/Card';
-import PlaceholderImage from '@/components/PlaceholderImage';
 
 export const metadata = {
   title: 'Patrons & Mentors | ENTENTE-2026',
@@ -81,13 +80,17 @@ export default function Patrons() {
               key={idx}
               className="border border-maroon rounded-xl p-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
             >
-              {/* Image */}
+              {/* Patron Image */}
               <div
                 className={`flex justify-center ${
                   idx % 2 === 0 ? 'md:order-1' : 'md:order-2'
                 }`}
               >
-                <PlaceholderImage type="speaker" alt={patron.name} />
+                <img 
+                  src={idx === 0 ? '/images/people/rajendra-pawar.jpg' : '/images/people/vijay-thadani.jpg'}
+                  alt={patron.name}
+                  className="w-48 h-48 object-cover rounded-full border-4 border-yellow shadow-lg"
+                />
               </div>
 
               {/* Text */}
@@ -127,9 +130,13 @@ export default function Patrons() {
               key={idx}
               className="group relative border border-maroon rounded-xl p-6 text-center overflow-hidden"
             >
-              {/* Default View */}
+              {/* Mentor Default View */}
               <div className="flex flex-col items-center">
-                <PlaceholderImage type="speaker" alt={mentor.name} />
+                <img 
+                  src={idx === 0 ? '/images/people/prof-prakash-gopalan.webp' : idx === 1 ? '/images/people/prof-parimal-mandke.jpg' : '/images/people/harpal-singh.jpg'}
+                  alt={mentor.name}
+                  className="w-32 h-32 object-cover rounded-full border-4 border-maroon shadow-lg"
+                />
                 <h3 className="text-lg font-semibold text-maroon mt-4">
                   {mentor.name}
                 </h3>

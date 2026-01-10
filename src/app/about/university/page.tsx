@@ -1,6 +1,5 @@
 import SectionWrapper from '@/components/SectionWrapper';
 import Card from '@/components/Card';
-import PlaceholderImage from '@/components/PlaceholderImage';
 
 export const metadata = {
   title: 'About NIIT University | ENTENTE-2026',
@@ -42,9 +41,13 @@ export default function AboutUniversity() {
             </p>
           </div>
 
-          {/* Image */}
+          {/* Campus Image */}
           <div className="flex justify-center">
-            <PlaceholderImage type="campus" alt="NIIT University Campus" />
+            <img 
+              src="/images/campus-view.jpg" 
+              alt="NIIT University Campus" 
+              className="w-full max-w-md h-80 object-cover rounded-xl shadow-lg"
+            />
           </div>
         </div>
       </SectionWrapper>
@@ -131,9 +134,13 @@ export default function AboutUniversity() {
         <div className="max-w-6xl mx-auto border-t-2 border-maroon mb-12"></div>
 
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Image Placeholder */}
+          {/* Campus Infrastructure Image */}
           <div className="flex justify-center">
-            <PlaceholderImage type="infrastructure" alt="University Infrastructure" />
+            <img 
+              src="/images/campus-view.jpg" 
+              alt="University Infrastructure" 
+              className="w-full max-w-md h-80 object-cover rounded-xl shadow-lg"
+            />
           </div>
 
           {/* Content */}

@@ -42,11 +42,13 @@ export default function AboutConference() {
             </p>
           </div>
 
-          {/* Image Placeholder */}
+          {/* Conference Image */}
           <div className="flex justify-center">
-            <div className="w-72 h-72 rounded-xl border-2 border-maroon flex items-center justify-center text-maroon">
-              Conference Image
-            </div>
+            <img 
+              src="/images/conference-image.jpg" 
+              alt="Conference Overview" 
+              className="w-72 h-72 object-cover rounded-xl shadow-lg"
+            />
           </div>
 
         </div>

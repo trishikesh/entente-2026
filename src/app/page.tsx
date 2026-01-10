@@ -30,11 +30,13 @@ export default function Home() {
             <CTAButton href="/about" label="Learn More" />
           </div>
 
-          {/* Image Placeholder */}
+          {/* NIIT Logo */}
           <div className="flex justify-center">
-            <div className="w-72 h-72 rounded-full border-2 border-maroon flex items-center justify-center text-maroon">
-              Image
-            </div>
+            <img 
+              src="/images/niit-logo.jpg" 
+              alt="NIIT University Logo" 
+              className="w-72 h-72 object-contain rounded-full"
+            />
           </div>
 
         </div>
@@ -89,11 +91,13 @@ export default function Home() {
       <SectionWrapper className="bg-white py-14">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-          {/* Image Placeholder */}
+          {/* Event Venue Image */}
           <div className="flex justify-center order-2 md:order-1">
-            <div className="w-72 h-48 rounded-xl border-2 border-maroon flex items-center justify-center text-maroon">
-              Event Image
-            </div>
+            <img 
+              src="/images/event-venue.jpg" 
+              alt="Conference Venue" 
+              className="w-72 h-48 object-cover rounded-xl shadow-lg"
+            />
           </div>
 
           {/* Dates */}

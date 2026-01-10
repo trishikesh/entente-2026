@@ -48,10 +48,12 @@ export default function Contact() {
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
           {/* Image */}
-          <div className="h-64 rounded-xl border border-maroon bg-maroon/5 flex items-center justify-center">
-            <p className="text-maroon font-semibold">
-              Conference Secretariat Image
-            </p>
+          <div className="h-64 rounded-xl overflow-hidden">
+            <img
+              src="/images/conference-image.jpg"
+              alt="Conference Secretariat"
+              className="w-full h-full object-cover"
+            />
           </div>
 
           {/* Text */}
@@ -134,10 +136,12 @@ export default function Contact() {
           </div>
 
           {/* Image */}
-          <div className="h-64 rounded-xl border border-maroon bg-maroon/5 flex items-center justify-center">
-            <p className="text-maroon font-semibold">
-              Campus Location Image
-            </p>
+          <div className="h-64 rounded-xl overflow-hidden">
+            <img
+              src="/images/campus-view.jpg"
+              alt="NIIT University Campus Location"
+              className="w-full h-full object-cover"
+            />
           </div>
 
         </div>

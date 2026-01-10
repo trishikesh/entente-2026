@@ -160,13 +160,13 @@ export default function Registration() {
             </div>
           </div>
 
-          {/* Image Placeholder */}
+          {/* Registration Process Image */}
           <div className="flex justify-center">
-            <div className="w-full h-80 bg-maroon rounded-xl flex items-center justify-center text-yellow">
-              <span className="text-sm font-semibold">
-                [Registration Process Illustration]
-              </span>
-            </div>
+            <img 
+              src="/images/event-venue.jpg" 
+              alt="Registration Process" 
+              className="w-full h-80 object-cover rounded-xl shadow-lg"
+            />
           </div>
         </div>
       </SectionWrapper>

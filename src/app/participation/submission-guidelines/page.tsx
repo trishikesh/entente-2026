@@ -85,17 +85,12 @@ export default function SubmissionGuidelines() {
     </div>
 
     {/* Right: Large Visual Block */}
-    <div className="h-full rounded-xl border border-maroon overflow-hidden flex items-center justify-center bg-maroon/5">
-      {/* Replace this div with <Image /> later if needed */}
-      <div className="text-center px-6">
-        <p className="text-maroon text-lg font-semibold mb-2">
-          Formatting Matters
-        </p>
-        <p className="text-sm text-maroon/80 leading-relaxed">
-          Ensure your manuscript strictly follows the prescribed format to
-          avoid desk rejection and delays during review.
-        </p>
-      </div>
+    <div className="h-full rounded-xl overflow-hidden">
+      <img
+        src="/images/conference-image.jpg"
+        alt="Conference Standards"
+        className="w-full h-full object-cover"
+      />
     </div>
 
   </div>

@@ -1,6 +1,5 @@
 import SectionWrapper from '@/components/SectionWrapper';
 import Card from '@/components/Card';
-import PlaceholderImage from '@/components/PlaceholderImage';
 
 export const metadata = {
   title: 'Featured Events | ENTENTE-2026',
@@ -61,13 +60,17 @@ export default function Events() {
               key={index}
               className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
             >
-              {/* Image */}
+              {/* Event Image */}
               <div
                 className={`flex justify-center ${
                   index % 2 === 0 ? 'md:order-1' : 'md:order-2'
                 }`}
               >
-                <PlaceholderImage type="event" alt={event.title} />
+                <img 
+                  src="/images/event-venue.jpg" 
+                  alt={event.title} 
+                  className="w-full max-w-md h-64 object-cover rounded-xl shadow-lg"
+                />
               </div>
 
               {/* Content */}
@@ -103,9 +106,13 @@ export default function Events() {
 
       {/* Social Program – Background Gallery Section */}
       <SectionWrapper className="relative bg-maroon py-20 overflow-hidden">
-        {/* Background Carousel (placeholder) */}
+        {/* Background Image */}
         <div className="absolute inset-0 opacity-20">
-          <div className="w-full h-full bg-[url('/images/social-1.jpg')] bg-cover bg-center animate-pulse" />
+          <img 
+            src="/images/social-1.jpg" 
+            alt="Social Programs" 
+            className="w-full h-full object-cover"
+          />
         </div>
 
         {/* Overlay */}
