@@ -40,19 +40,19 @@ export default function HeroCarousel() {
       </div>
 
       {/* Translucent Box - Always Visible */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="backdrop-blur-md bg-white/10 rounded-2xl px-12 py-8 border border-white/20 shadow-2xl">
+      <div className="absolute inset-0 flex items-center justify-center px-6">
+        <div className="backdrop-blur-md bg-white/10 rounded-2xl px-8 md:px-12 py-8 md:py-10 border border-white/20 shadow-2xl min-w-[300px] md:min-w-[500px]">
           {/* Text Content that Changes */}
-          <div className="relative h-32 md:h-36">
+          <div className="relative">
             {slides.map((slide, index) => (
               <div
                 key={index}
-                className={`absolute inset-0 transition-opacity duration-1000 text-center text-white ${
-                  index === currentSlide ? 'opacity-100' : 'opacity-0'
+                className={`transition-opacity duration-1000 text-center text-white ${
+                  index === currentSlide ? 'opacity-100' : 'opacity-0 absolute inset-0'
                 }`}
               >
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">{slide.title}</h1>
-                <p className="text-xl md:text-2xl text-yellow">{slide.subtitle}</p>
+                <h1 className="text-3xl md:text-5xl font-bold mb-3 md:mb-4">{slide.title}</h1>
+                <p className="text-lg md:text-2xl text-yellow">{slide.subtitle}</p>
               </div>
             ))}
           </div>
