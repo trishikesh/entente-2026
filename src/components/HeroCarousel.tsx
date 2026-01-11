@@ -39,21 +39,25 @@ export default function HeroCarousel() {
         <div className="absolute inset-0 bg-maroon/70"></div>
       </div>
 
-      {slides.map((slide, index) => (
-        <div
-          key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 flex items-center justify-center ${
-            index === currentSlide ? 'opacity-100' : 'opacity-0'
-          }`}
-        >
-          <div className="text-center text-white px-6">
-            <div className="backdrop-blur-sm bg-white/10 rounded-2xl px-12 py-8 border border-white/20 shadow-2xl">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">{slide.title}</h1>
-              <p className="text-xl md:text-2xl text-yellow">{slide.subtitle}</p>
-            </div>
+      {/* Translucent Box - Always Visible */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="backdrop-blur-md bg-white/10 rounded-2xl px-12 py-8 border border-white/20 shadow-2xl">
+          {/* Text Content that Changes */}
+          <div className="relative h-32 md:h-36">
+            {slides.map((slide, index) => (
+              <div
+                key={index}
+                className={`absolute inset-0 transition-opacity duration-1000 text-center text-white ${
+                  index === currentSlide ? 'opacity-100' : 'opacity-0'
+                }`}
+              >
+                <h1 className="text-4xl md:text-5xl font-bold mb-4">{slide.title}</h1>
+                <p className="text-xl md:text-2xl text-yellow">{slide.subtitle}</p>
+              </div>
+            ))}
           </div>
         </div>
-      ))}
+      </div>
 
       {/* Navigation Dots */}
       <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
