@@ -9,14 +9,17 @@ export default function HeroCarousel() {
     {
       title: 'ENTENTE-2026',
       subtitle: 'Knowledge Society in Transition',
+      image: '/images/hero-banner.jpg',
     },
     {
       title: 'Advancing Sustainability',
       subtitle: 'Through Multidisciplinary Research',
+      image: '/images/hero-1.jpg',
     },
     {
       title: 'NIIT University',
       subtitle: 'Neemrana, Rajasthan',
+      image: '/images/hero-2.jpg',
     },
   ];
 
@@ -29,15 +32,22 @@ export default function HeroCarousel() {
 
   return (
     <div className="relative h-96 md:h-[500px] overflow-hidden rounded-sm">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <img 
-          src="/images/hero-banner.jpg" 
-          alt="ENTENTE-2026 Conference" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-maroon/70"></div>
-      </div>
+      {/* Background Images that Change */}
+      {slides.map((slide, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 transition-opacity duration-1000 ${
+            index === currentSlide ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          <img 
+            src={slide.image}
+            alt={slide.title}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-maroon/70"></div>
+        </div>
+      ))}
 
       {/* Translucent Box - Always Visible */}
       <div className="absolute inset-0 flex items-center justify-center px-6">

@@ -14,37 +14,64 @@ export default function Home() {
       </SectionWrapper>
 
       {/* About ENTENTE-2026 — Split Layout */}
-      <SectionWrapper className="bg-white py-14">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <SectionWrapper className="bg-gradient-to-br from-gray-50 to-white py-20">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-16 items-center">
           
-          {/* Text */}
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-maroon mb-6">
-              About ENTENTE-2026
-            </h2>
-            <p className="text-maroon text-lg leading-relaxed mb-6">
-              ENTENTE-2026 is an international conference providing a collaborative platform for researchers,
-              students, academicians, and industry experts to exchange ideas across domains such as humanities,
-              social sciences, management, educational technology, and library sciences.
+          {/* Text Content */}
+          <div className="lg:col-span-3 space-y-6">
+            <div className="inline-block">
+              <h2 className="text-4xl md:text-5xl font-bold text-maroon mb-2 relative">
+                About ENTENTE-2026
+                <div className="absolute -bottom-2 left-0 w-20 h-1 bg-gradient-to-r from-yellow to-maroon rounded-full"></div>
+              </h2>
+            </div>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              ENTENTE-2026 is an <span className="font-semibold text-maroon">international conference</span> providing a collaborative platform for researchers,
+              students, academicians, and industry experts to exchange ideas across domains such as <span className="font-semibold text-maroon">humanities,
+              social sciences, management, educational technology,</span> and <span className="font-semibold text-maroon">library sciences.</span>
             </p>
-            <CTAButton href="/about" label="Learn More" />
+            <div className="flex gap-4 pt-4">
+              <CTAButton href="/about" label="Learn More" />
+              <a href="/call-for-papers" className="px-6 py-3 border-2 border-maroon text-maroon font-semibold rounded-lg hover:bg-maroon hover:text-white transition-all duration-300">
+                Submit Paper
+              </a>
+            </div>
           </div>
 
-          {/* Decorative Element */}
-          <div className="flex justify-center items-center">
-            <div className="relative w-80 h-80">
-              {/* Background circles */}
-              <div className="absolute top-8 left-8 w-56 h-56 bg-gradient-to-br from-maroon/20 to-yellow/30 rounded-full blur-2xl"></div>
-              <div className="absolute bottom-8 right-8 w-56 h-56 bg-gradient-to-tl from-yellow/20 to-maroon/30 rounded-full blur-2xl"></div>
+          {/* Date Card */}
+          <div className="lg:col-span-2 flex justify-center">
+            <div className="relative group">
+              {/* Glow effect */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-yellow via-maroon to-yellow rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition duration-300"></div>
               
-              {/* Main content card */}
-              <div className="relative z-10 bg-white/80 backdrop-blur-sm border-2 border-maroon/20 rounded-2xl p-8 shadow-xl">
-                <div className="text-center space-y-4">
-                  <div className="text-6xl font-bold text-maroon">8-10</div>
-                  <div className="text-xl font-semibold text-maroon">April 2026</div>
-                  <div className="h-px bg-maroon/30 my-4"></div>
-                  <div className="text-sm text-maroon/80">NIIT University</div>
-                  <div className="text-sm text-maroon/80">Neemrana, Rajasthan</div>
+              {/* Main card with dark background */}
+              <div className="relative bg-maroon rounded-2xl p-10 shadow-2xl transform group-hover:scale-105 transition-all duration-300 border-2 border-yellow/30">
+                {/* Corner decorations */}
+                <div className="absolute top-0 right-0 w-16 h-16 bg-yellow/20 rounded-bl-full"></div>
+                <div className="absolute bottom-0 left-0 w-16 h-16 bg-yellow/20 rounded-tr-full"></div>
+                
+                <div className="relative text-center space-y-6">
+                  {/* Large visible dates */}
+                  <div>
+                    <div className="text-8xl font-black text-yellow drop-shadow-2xl">
+                      8-10
+                    </div>
+                    <div className="text-2xl font-bold text-white tracking-[0.4em] mt-2">APRIL</div>
+                    <div className="text-xl font-semibold text-yellow/90">2026</div>
+                  </div>
+                  
+                  {/* Divider */}
+                  <div className="flex items-center justify-center gap-2">
+                    <div className="w-12 h-px bg-yellow/50"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow shadow-lg shadow-yellow/50 animate-pulse"></div>
+                    <div className="w-12 h-px bg-yellow/50"></div>
+                  </div>
+                  
+                  {/* Location */}
+                  <div className="space-y-2 bg-white/10 backdrop-blur-sm rounded-xl py-4 px-6 border border-white/20">
+                    <div className="text-xl font-bold text-white">NIIT University</div>
+                    <div className="text-sm text-yellow font-medium">📍 Neemrana, Rajasthan</div>
+                  </div>
                 </div>
               </div>
             </div>
