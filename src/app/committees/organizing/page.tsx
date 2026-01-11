@@ -74,7 +74,15 @@ export default function OrganizingCommittee() {
             src={`/images/people/${member.name}.jpg`}
             alt={member.name}
             className="w-32 h-32 rounded-full object-cover border-4 border-maroon mb-4"
-          />v>
+          />
+
+          <h3 className="text-base font-semibold text-maroon">
+            {member.name}
+          </h3>
+          <p className="text-sm text-maroon font-medium">
+            {member.role}
+          </p>
+        </div>
 
         {/* Hover Details */}
         <div className="absolute inset-0 bg-white/95 flex items-center justify-center px-5 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
