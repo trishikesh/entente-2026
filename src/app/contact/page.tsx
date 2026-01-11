@@ -1,6 +1,6 @@
 import SectionWrapper from '@/components/SectionWrapper';
 
-export const runtime = "edge";
+
 
 export const metadata = {
   title: 'Contact | ENTENTE-2026',

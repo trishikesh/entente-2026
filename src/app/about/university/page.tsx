@@ -1,7 +1,7 @@
 import SectionWrapper from '@/components/SectionWrapper';
 import Card from '@/components/Card';
 
-export const runtime = "edge";
+
 
 export const metadata = {
   title: 'About NIIT University | ENTENTE-2026',

@@ -2,7 +2,7 @@ import SectionWrapper from '@/components/SectionWrapper';
 import Card from '@/components/Card';
 import CTAButton from '@/components/CTAButton';
 
-export const runtime = "edge";
+
 
 export const metadata = {
   title: 'About the Conference | ENTENTE-2026',
