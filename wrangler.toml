@@ -1,0 +1,15 @@
+name = "entente"
+main = ".vercel/output/static/_worker.js/index.js"
+type = "javascript"
+compatibility_date = "2026-01-11"
+# Set your Cloudflare account ID here (required to publish to your account):
+account_id = "03db8f6287467f7ff555e6970a492a79"
+workers_dev = true
+
+[build]
+command = "npm run pages:build"
+
+# Publish the static output produced by @cloudflare/next-on-pages so the worker
+# can fetch static assets via the ASSETS binding.
+[site]
+bucket = ".vercel/output/static"
