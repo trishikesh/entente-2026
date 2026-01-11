@@ -1,10 +1,13 @@
 import SectionWrapper from '@/components/SectionWrapper';
 import Card from '@/components/Card';
 
+export const runtime = "edge";
+
 export const metadata = {
   title: 'Venue & University | ENTENTE-2026',
   description: 'NIIT University venue and campus information',
 };
+
 
 export default function Venue() {
   return (

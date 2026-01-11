@@ -1,6 +1,8 @@
 import SectionWrapper from '@/components/SectionWrapper';
 import Card from '@/components/Card';
 
+export const runtime = "edge";
+
 export const metadata = {
   title: 'Committees | ENTENTE-2026',
   description: 'Conference organizing committee and advisory board',

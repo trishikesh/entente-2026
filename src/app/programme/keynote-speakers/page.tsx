@@ -1,6 +1,8 @@
 import SectionWrapper from '@/components/SectionWrapper';
 import Card from '@/components/Card';
 
+export const runtime = "edge";
+
 export const metadata = {
   title: 'Keynote & Speakers | ENTENTE-2026',
   description: 'Distinguished keynote speakers and resource persons',

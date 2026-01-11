@@ -1,5 +1,7 @@
 import SectionWrapper from '@/components/SectionWrapper';
 
+export const runtime = "edge";
+
 export const metadata = {
   title: 'Submission Guidelines | ENTENTE-2026',
   description: 'Paper submission guidelines and requirements',
