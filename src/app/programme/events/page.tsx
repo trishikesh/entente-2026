@@ -54,52 +54,29 @@ export default function Events() {
           Conference Highlights
         </h2>
 
-        <div className="max-w-6xl mx-auto space-y-16">
+        <div className="max-w-4xl mx-auto space-y-6">
           {events.map((event, index) => (
-            <div
-              key={index}
-              className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
-            >
-              {/* Event Image */}
-              <div
-                className={`flex justify-center ${
-                  index % 2 === 0 ? 'md:order-1' : 'md:order-2'
-                }`}
-              >
-                <img 
-                  src="/images/event-venue.jpg" 
-                  alt={event.title} 
-                  className="w-full max-w-md h-64 object-cover rounded-xl shadow-lg"
-                />
+            <Card key={index}>
+              <div>
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-2xl font-bold text-maroon">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <h3 className="text-xl font-semibold text-maroon">
+                    {event.title}
+                  </h3>
+                </div>
+                
+                <div className="flex items-center mb-3">
+                  <span className="w-2 h-2 bg-yellow rounded-full mr-2"></span>
+                  <p className="text-maroon text-sm font-semibold">{event.date}</p>
+                </div>
+                
+                <p className="text-maroon leading-relaxed">
+                  {event.description}
+                </p>
               </div>
-
-              {/* Content */}
-              <div className={index % 2 === 0 ? 'md:order-2' : 'md:order-1'}>
-                <Card>
-                  <div>
-                    <div className="flex items-center mb-4">
-                      <div className="w-10 h-10 bg-maroon text-yellow rounded-full flex items-center justify-center font-bold mr-4">
-                        {String(index + 1).padStart(2, '0')}
-                      </div>
-                      <h3 className="text-xl font-semibold text-maroon">
-                        {event.title}
-                      </h3>
-                    </div>
-
-                    <div className="border-b border-yellow pb-2 mb-3">
-                      <p className="text-maroon text-sm font-semibold flex items-center">
-                        <span className="w-2 h-2 bg-yellow rounded-full mr-2"></span>
-                        {event.date}
-                      </p>
-                    </div>
-
-                    <p className="text-maroon text-sm leading-relaxed">
-                      {event.description}
-                    </p>
-                  </div>
-                </Card>
-              </div>
-            </div>
+            </Card>
           ))}
         </div>
       </SectionWrapper>

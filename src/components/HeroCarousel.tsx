@@ -47,8 +47,10 @@ export default function HeroCarousel() {
           }`}
         >
           <div className="text-center text-white px-6">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">{slide.title}</h1>
-            <p className="text-xl md:text-2xl text-yellow">{slide.subtitle}</p>
+            <div className="backdrop-blur-sm bg-white/10 rounded-2xl px-12 py-8 border border-white/20 shadow-2xl">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">{slide.title}</h1>
+              <p className="text-xl md:text-2xl text-yellow">{slide.subtitle}</p>
+            </div>
           </div>
         </div>
       ))}

@@ -87,9 +87,9 @@ export default function KeynoteSpeakers() {
       >
         {/* Photo */}
         <img
-          src={`/images/people/${speaker.name}.${index === 0 ? 'png' : index === 2 ? 'jpeg' : 'jpg'}`}
+          src={`/images/people/${speaker.name}.${index === 0 ? 'png' : 'jpg'}`}
           alt={speaker.name}
-          className="w-32 h-32 rounded-full object-cover border-4 border-maroon mb-4"
+          className="w-32 h-32 rounded-full object-cover border-4 border-maroon mb-4 shadow-lg"
         />
 
         {/* Name + Designation (Always Visible) */}

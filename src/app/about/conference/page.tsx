@@ -43,11 +43,11 @@ export default function AboutConference() {
           </div>
 
           {/* Conference Image */}
-          <div className="flex justify-center">
+          <div className="flex justify-center items-center">
             <img 
               src="/images/conference-image.jpg" 
               alt="Conference Overview" 
-              className="w-72 h-72 object-cover rounded-xl shadow-lg"
+              className="w-full h-80 object-cover rounded-xl shadow-lg"
             />
           </div>
 

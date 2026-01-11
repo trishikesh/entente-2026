@@ -66,7 +66,7 @@ export default function KeynoteSpeakers() {
                 <img
                   src={`/images/people/${speaker.name}.${index === 0 ? 'png' : 'jpg'}`}
                   alt={speaker.name}
-                  className="w-40 h-40 rounded-full object-cover border-4 border-maroon"
+                  className="w-40 h-40 rounded-full object-cover border-4 border-maroon shadow-lg"
                 />
               </div>
               <Card className="h-full">

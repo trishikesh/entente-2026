@@ -30,13 +30,24 @@ export default function Home() {
             <CTAButton href="/about" label="Learn More" />
           </div>
 
-          {/* NIIT Logo */}
-          <div className="flex justify-center">
-            <img 
-              src="/images/niit-logo.jpg" 
-              alt="NIIT University Logo" 
-              className="w-72 h-72 object-contain rounded-full"
-            />
+          {/* Decorative Element */}
+          <div className="flex justify-center items-center">
+            <div className="relative w-80 h-80">
+              {/* Background circles */}
+              <div className="absolute top-8 left-8 w-56 h-56 bg-gradient-to-br from-maroon/20 to-yellow/30 rounded-full blur-2xl"></div>
+              <div className="absolute bottom-8 right-8 w-56 h-56 bg-gradient-to-tl from-yellow/20 to-maroon/30 rounded-full blur-2xl"></div>
+              
+              {/* Main content card */}
+              <div className="relative z-10 bg-white/80 backdrop-blur-sm border-2 border-maroon/20 rounded-2xl p-8 shadow-xl">
+                <div className="text-center space-y-4">
+                  <div className="text-6xl font-bold text-maroon">8-10</div>
+                  <div className="text-xl font-semibold text-maroon">April 2026</div>
+                  <div className="h-px bg-maroon/30 my-4"></div>
+                  <div className="text-sm text-maroon/80">NIIT University</div>
+                  <div className="text-sm text-maroon/80">Neemrana, Rajasthan</div>
+                </div>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -96,7 +107,7 @@ export default function Home() {
             <img 
               src="/images/event-venue.jpg" 
               alt="Conference Venue" 
-              className="w-72 h-48 object-cover rounded-xl shadow-lg"
+              className="w-full h-80 object-cover rounded-xl shadow-lg"
             />
           </div>
 

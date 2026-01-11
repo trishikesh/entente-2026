@@ -133,27 +133,33 @@ export default function AboutUniversity() {
         {/* Top Divider */}
         <div className="max-w-6xl mx-auto border-t-2 border-maroon mb-12"></div>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Campus Infrastructure Image */}
-          <div className="flex justify-center">
-            <img 
-              src="/images/campus-view.jpg" 
-              alt="University Infrastructure" 
-              className="w-full max-w-md h-80 object-cover rounded-xl shadow-lg"
-            />
-          </div>
-
+        <div className="max-w-6xl mx-auto">
           {/* Content */}
-          <div>
-            <h3 className="text-2xl font-bold text-maroon mb-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h3 className="text-2xl md:text-3xl font-bold text-maroon mb-6">
               Infrastructure & Institutional Focus
             </h3>
-            <p className="text-maroon text-lg leading-relaxed">
+            <p className="text-maroon text-lg leading-relaxed mb-8">
               NIIT University offers modern infrastructure, state-of-the-art laboratories,
               and a strong focus on sustainability, innovation, and industry collaboration—
               creating an environment where academic excellence and real-world relevance
               converge.
             </p>
+            
+            {/* Key Features Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+              {[
+                { icon: '🏛️', title: 'Modern Labs', desc: 'State-of-the-art facilities' },
+                { icon: '🌱', title: 'Sustainability', desc: 'Eco-friendly campus' },
+                { icon: '🤝', title: 'Industry Ties', desc: 'Real-world collaboration' },
+              ].map((item, idx) => (
+                <div key={idx} className="border border-maroon rounded-lg p-5">
+                  <div className="text-4xl mb-3">{item.icon}</div>
+                  <h4 className="font-semibold text-maroon mb-2">{item.title}</h4>
+                  <p className="text-sm text-maroon">{item.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
