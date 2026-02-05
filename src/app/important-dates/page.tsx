@@ -94,7 +94,7 @@ export default function ImportantDates() {
               Submission Phase
             </h3>
             <p className="text-gray-700">
-              Submit abstracts and full papers by 30 December 2025
+              Submit abstracts and full papers by 28 February 2026
             </p>
           </Card>
           <Card>

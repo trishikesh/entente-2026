@@ -148,8 +148,8 @@ export default function Home() {
 
             <div className="grid grid-cols-1 gap-4">
               {[
-                ['Abstract Submission Closes', '30 November 2025'],
-                ['Full Paper Submission Closes', '30 December 2025'],
+                ['Abstract Submission ', '15 February 2026'],
+                ['Full Paper Submission ', '28 February 2026'],
                 ['Early Bird Registration Closes', '30 January 2026'],
                 ['Conference Dates', '8–10 April 2026'],
               ].map(([title, date]) => (

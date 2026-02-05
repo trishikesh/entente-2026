@@ -11,7 +11,7 @@ export const metadata = {
 export default function Registration() {
   const registrationCategories = [
     {
-      category: 'Research Scholar',
+      category: 'Student/Research Scholar',
       price: '₹1500',
       includes: [
         'Access to all sessions',
@@ -21,8 +21,8 @@ export default function Registration() {
       ],
     },
     {
-      category: 'Faculty',
-      price: '₹2500',
+      category: 'Academician',
+      price: '₹3000',
       includes: [
         'Access to all sessions',
         'Conference kit',
@@ -38,16 +38,6 @@ export default function Registration() {
         'Premium kit',
         'Lunch & refreshments',
         'Networking events',
-        'Certificate',
-      ],
-    },
-    {
-      category: 'Student',
-      price: '₹800',
-      includes: [
-        'Access to all sessions',
-        'Conference kit',
-        'Lunch & refreshments',
         'Certificate',
       ],
     },
@@ -73,7 +63,7 @@ export default function Registration() {
           Registration Categories
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {registrationCategories.map((reg, idx) => (
             <div
               key={idx}
@@ -104,8 +94,9 @@ export default function Registration() {
           ))}
         </div>
 
-        <p className="text-center text-sm text-maroon italic mt-6">
-          *All categories include access for the full 3-day conference.
+        <p className="text-center text-sm text-maroon italic mt-4">
+          *Registration fee is per paper and is non-refundable. It does not include 
+accommodation charges. 
         </p>
       </SectionWrapper>
 
@@ -183,8 +174,8 @@ export default function Registration() {
               Registration Deadlines
             </h3>
             <ul className="space-y-2 text-maroon text-sm">
-              <li><strong>Early Bird:</strong> Before 30 Nov 2025</li>
-              <li><strong>Regular:</strong> Till 31 Dec 2025</li>
+              <li><strong>Early Bird:</strong> Before 30th January 2026</li>
+              <li><strong>Regular:</strong> 31st Jan 2026 onwards</li>
               <li><strong>On-Site:</strong> During the conference</li>
             </ul>
           </Card>
@@ -194,11 +185,23 @@ export default function Registration() {
             <h3 className="text-xl font-bold text-maroon mb-4">
               Payment Methods
             </h3>
-            <ul className="grid grid-cols-2 gap-2 text-maroon text-sm">
-              <li>Debit Card</li>
-              <li>Credit Card</li>
-              <li>Net Banking</li>
-              <li>UPI</li>
+            <ul className="grid grid-cols-2 gap-4 text-maroon text-sm">
+              <li className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-yellow rounded-full"></span>
+              Debit Card
+              </li>
+              <li className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-yellow rounded-full"></span>
+              Credit Card
+              </li>
+              <li className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-yellow rounded-full"></span>
+              Net Banking
+              </li>
+              <li className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-yellow rounded-full"></span>
+              UPI
+              </li>
             </ul>
           </Card>
 

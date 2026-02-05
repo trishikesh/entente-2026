@@ -30,10 +30,11 @@ export default function SubmissionGuidelines() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {[
-            { label: 'Submission Deadline', value: '31 December 2025' },
-            { label: 'Acceptance Notification', value: '31 January 2026' },
-            { label: 'Camera Ready Copy', value: '28 February 2026' },
-            { label: 'Conference Dates', value: '22–24 April 2026' },
+
+            { label: 'Registration Deadline', value: '7 April 2026' },
+            { label: 'Abstract Submission', value: '15 February 2026' },
+            { label: 'Full Paper Submission', value: '28 February 2026' },
+            { label: 'Conference Dates', value: '8-10 April 2026' },
           ].map((item, idx) => (
             <div
               key={idx}

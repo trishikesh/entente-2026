@@ -192,7 +192,7 @@ These links are fully functional:
 **Knowledge Society in Transition: Advancing Sustainability through Multidisciplinary Research**
 
 ### Important Dates
-- **Abstract Submission:** Closes 30 November 2025
+- **Abstract Submission:** Closes 15 February 2026
 - **Full Paper Submission:** Closes 30 December 2025
 - **Early Bird Registration:** 1 Jan - 30 Jan 2026
 - **Conference Dates:** 8–10 April 2026

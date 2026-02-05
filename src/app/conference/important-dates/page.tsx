@@ -72,11 +72,11 @@ export default function ImportantDates() {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="border-b-2 border-yellow pb-3">
-                <p className="text-maroon font-semibold mb-1">Submission Phase</p>
-                <p className="text-maroon text-sm">Nov 1 - Dec 30, 2025</p>
+                <p className="text-maroon font-semibold mb-1">Registration Phase</p>
+                <p className="text-maroon text-sm">Nov 1 - Feb 15, 2026</p>
               </div>
               <div className="border-b-2 border-yellow pb-3">
-                <p className="text-maroon font-semibold mb-1">Registration Phase</p>
+                <p className="text-maroon font-semibold mb-1">Submission Phase</p>
                 <p className="text-maroon text-sm">Jan 1 - Ongoing, 2026</p>
               </div>
               <div className="border-b-2 border-yellow pb-3">

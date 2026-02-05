@@ -49,7 +49,7 @@ export default function CallForPapers() {
               </div>
               <div className="ml-4 flex-1">
                 <h3 className="text-lg font-semibold text-maroon mb-2">Submit Abstract</h3>
-                <p className="text-maroon">Maximum 500 words via Registration Form before 30 November 2025</p>
+                <p className="text-maroon">Maximum 500 words via Registration Form before 15 February 2026</p>
               </div>
             </div>
           </Card>
