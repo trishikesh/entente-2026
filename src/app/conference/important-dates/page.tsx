@@ -11,9 +11,9 @@ export const metadata = {
 export default function ImportantDates() {
   const dates = [
     { event: 'Abstract Submission Opens', date: '1 November 2025' },
-    { event: 'Abstract Submission Closes', date: '30 November 2025' },
+    { event: 'Abstract Submission Closes', date: '15 February 2025' },
     { event: 'Full Paper Submission Opens (After Acceptance)', date: '1 December 2025' },
-    { event: 'Full Paper Submission Closes', date: '30 December 2025' },
+    { event: 'Full Paper Submission Closes', date: '28 February 2026' },
     { event: 'Early Bird Registration Opens', date: '1 January 2026' },
     { event: 'Early Bird Registration Closes', date: '30 January 2026' },
     { event: 'Regular Registration Opens', date: '31 January 2026' },
