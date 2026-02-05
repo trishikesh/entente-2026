@@ -12,12 +12,12 @@ export default function ImportantDates() {
   const dates = [
     {
       event: 'Submission of Abstract Closes',
-      date: '30 November 2025',
+      date: '15 February 2026',
       color: 'border-l-red-600',
     },
     {
       event: 'Submission of Full Paper Closes',
-      date: '30 December 2025',
+      date: '28 February 2026',
       color: 'border-l-orange-600',
     },
     {
